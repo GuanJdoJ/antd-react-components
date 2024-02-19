@@ -1,0 +1,29 @@
+{
+  "name": "@guanjdoj/arc-layout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "arc-layout",
+  "homepage": "https://github.com/GuanJdoJ/antd-react-components#readme",
+  "bugs": {
+    "url": "https://github.com/GuanJdoJ/antd-react-components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuanJdoJ/antd-react-components.git"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

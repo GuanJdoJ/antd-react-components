@@ -84,7 +84,7 @@ async function release() {
       'version',
       '--exact',
       '--message',
-      '🎨 chore(release): Publish',
+      'chore(release): Publish',
       '--conventional-commits',
     ]
       .concat(conventionalGraduate)

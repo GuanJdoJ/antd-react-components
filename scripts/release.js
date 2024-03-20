@@ -4,6 +4,8 @@ const execa = require('execa');
 const getPackages = require('./utils/getPackages');
 const isNextVersion = require('./utils/isNextVersion');
 
+const cwd = process.cwd();
+const args = yParser(process.argv);
 const lernaCli = require.resolve('lerna/cli');
 
 function logTemp(text) {
@@ -53,7 +55,40 @@ async function release() {
       return pkg.split('/')[1];
     })
     .filter(Boolean);
-  logTemp(updated.join(','));
+
+  logStep('build');
+  await execa.sync('npm', ['run', 'build']);
+
+  logStep('bump version with lerna version');
+
+  const conventionalGraduate = args.conventionalGraduate
+    ? ['--conventional-graduate'].concat(
+        Array.isArray(args.conventionalGraduate)
+          ? args.conventionalGraduate.join(',')
+          : [],
+      )
+    : [];
+  const conventionalPrerelease = args.conventionalPrerelease
+    ? ['--conventional-prerelease'].concat(
+        Array.isArray(args.conventionalPrerelease)
+          ? args.conventionalPrerelease.join(',')
+          : [],
+      )
+    : [];
+
+  await execa(
+    'node',
+    [
+      [lernaCli],
+      'version',
+      '--exact',
+      '--message',
+      '🎨 chore(release): Publish',
+      '--conventional-commits',
+    ]
+      .concat(conventionalGraduate)
+      .concat(conventionalPrerelease),
+  );
 }
 
 release().catch((err) => {

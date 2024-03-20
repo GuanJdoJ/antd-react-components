@@ -1,7 +1,6 @@
 {
   "name": "@guanjdoj/arc-layout",
   "version": "0.0.0",
-  "private": true,
   "description": "arc-layout",
   "homepage": "https://github.com/GuanJdoJ/antd-react-components#readme",
   "bugs": {

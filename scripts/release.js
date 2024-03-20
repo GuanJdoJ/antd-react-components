@@ -1,6 +1,7 @@
 const { yParser, chalk } = require('@umijs/utils');
 const { join } = require('path');
 const execa = require('execa');
+const exec = require('./utils/exec');
 const getPackages = require('./utils/getPackages');
 const isNextVersion = require('./utils/isNextVersion');
 
@@ -76,7 +77,7 @@ async function release() {
       )
     : [];
 
-  await execa(
+  await exec(
     'node',
     [
       [lernaCli],

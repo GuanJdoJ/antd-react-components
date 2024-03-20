@@ -1,6 +1,7 @@
 {
   "name": "umi4",
   "version": "1.0.0",
+  "private": "true",
   "description": "",
   "scripts": {
     "dev": "PORT=7000 umi dev",

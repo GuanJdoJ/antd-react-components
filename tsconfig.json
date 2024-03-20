@@ -19,5 +19,5 @@
       "@guanjdoj/arc-layout": ["./packages/layout/src/index.tsx"]
     }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "**/src/**/*"]
 }

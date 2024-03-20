@@ -1,6 +1,6 @@
 {
   "name": "@guanjdoj/arc-layout",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "description": "arc-layout",
   "homepage": "https://github.com/GuanJdoJ/antd-react-components#readme",
@@ -22,6 +22,10 @@
   ],
   "scripts": {
     "build": "father build"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

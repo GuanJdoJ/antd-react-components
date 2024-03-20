@@ -8,7 +8,7 @@
     "projects/*"
   ],
   "scripts": {
-    "build": " npm run build-components",
+    "build": "npm run build-components",
     "build-components": "pnpm --filter \"@guanjdoj/**\" build",
     "build:watch": "father dev",
     "dev": "dumi dev",
@@ -19,6 +19,7 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run build",
+    "release": "node ./scripts/release.js",
     "start": "npm run dev"
   },
   "commitlint": {
@@ -52,12 +53,14 @@
     "@types/react-dom": "^18.2.18",
     "@umijs/lint": "^4.0.0",
     "@umijs/plugins": "^4.1.1",
+    "@umijs/utils": "^4.1.2",
     "antd": "^5.13.2",
     "antd-style": "^3.6.1",
     "chalk": "^4.1.2",
     "dumi": "^2.0.2",
     "dumi-theme-antd-style": "^0.25.1",
     "eslint": "^8.23.0",
+    "execa": "^5.1.1",
     "father": "^4.1.0",
     "husky": "^8.0.1",
     "lerna": "^8.0.2",
@@ -70,10 +73,6 @@
     "stylelint": "^14.9.1",
     "typescript": "5.3.3",
     "umi": "^4.1.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

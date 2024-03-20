@@ -32,6 +32,9 @@ importers:
       '@umijs/plugins':
         specifier: ^4.1.1
         version: 4.1.1(@babel/core@7.23.7)(@types/react-dom@18.2.18)(@types/react@18.2.48)(antd@5.13.2)(react-dom@18.2.0)(react@18.2.0)
+      '@umijs/utils':
+        specifier: ^4.1.2
+        version: 4.1.2
       antd:
         specifier: ^5.13.2
         version: 5.13.2(react-dom@18.2.0)(react@18.2.0)
@@ -50,6 +53,9 @@ importers:
       eslint:
         specifier: ^8.23.0
         version: 8.56.0
+      execa:
+        specifier: ^5.1.1
+        version: 5.1.1
       father:
         specifier: ^4.1.0
         version: 4.3.8(@types/node@20.11.6)
@@ -4203,6 +4209,13 @@ packages:
       pino: 7.11.0
     dev: true
 
+  /@umijs/utils@4.1.2:
+    resolution: {integrity: sha512-YBzN7Zn3595W93t8XPh8IbKMInr6NecXPtHVD+L7fJFv5oCrzHxCkvSZBTmTXuFMyW+9rHT0TlsXM4gqQ1n18Q==}
+    dependencies:
+      chokidar: 3.5.3
+      pino: 7.11.0
+    dev: true
+
   /@umijs/valtio@1.0.4(@types/react@18.2.48)(react@18.2.0):
     resolution: {integrity: sha512-2PmAU4rNQbBqrWpJ86Si9UGC23JapkYw8k7Hna6V8DHLaEYJENdp2e/IKLPHSPghzrdQtbUHSoOAUsBd4i4OzQ==}
     dependencies:
@@ -6659,7 +6672,7 @@ packages:
       '@types/mdast': 3.0.15
       '@umijs/bundler-utils': 4.1.1
       '@umijs/core': 4.1.1
-      '@umijs/utils': 4.1.1
+      '@umijs/utils': 4.1.2
       animated-scroll-to: 2.3.0
       classnames: 2.3.2
       codesandbox: 2.2.3
@@ -7557,7 +7570,7 @@ packages:
       '@umijs/bundler-webpack': 4.1.1(typescript@5.0.4)
       '@umijs/case-sensitive-paths-webpack-plugin': 1.0.1
       '@umijs/core': 4.1.1
-      '@umijs/utils': 4.1.1
+      '@umijs/utils': 4.1.2
       '@vercel/ncc': 0.33.3
       babel-plugin-dynamic-import-node: 2.3.3
       babel-plugin-module-resolver: 4.1.0
